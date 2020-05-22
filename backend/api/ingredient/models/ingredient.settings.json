@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredients",
+  "info": {
+    "name": "Ingredient"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "ingredientname": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "poisson",
+        "condiment",
+        "volaille",
+        "produit_laitier",
+        "saveurs_du_monde",
+        "viande",
+        "legume",
+        "fruit",
+        "feculent",
+        "conserve",
+        "oeufs",
+        "boulangerie",
+        "charcuterie",
+        "sauce",
+        "farine",
+        "traiteur",
+        "surgeles",
+        "soupe"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_category_ingredients",
+  "info": {
+    "name": "ingredient",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "measurement": {
+      "type": "string"
+    },
+    "ingredient": {
+      "model": "ingredient"
+    }
+  }
+}

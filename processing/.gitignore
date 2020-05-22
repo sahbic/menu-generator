@@ -3,3 +3,7 @@ data/
 
 # Cache folder
 __pycache__
+
+
+# Python notebooks checkpoints
+.ipynb_checkpoints

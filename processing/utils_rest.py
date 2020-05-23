@@ -5,10 +5,10 @@ import getpass
 import csv
 import os
 
-import numpy as np
+# import numpy as np
 
-from email.mime.text import MIMEText
-from scipy.cluster.vq import vq, kmeans, whiten, kmeans2
+# from email.mime.text import MIMEText
+# from scipy.cluster.vq import vq, kmeans, whiten, kmeans2
 
 """read the JSON file"""
 def read_recipes(DATA_FOLDER):

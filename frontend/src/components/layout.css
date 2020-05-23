@@ -624,7 +624,7 @@ pre tt:after {
 
 #main-nav {
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 #main-footer {
@@ -638,4 +638,29 @@ pre tt:after {
   margin: 0 auto;
   max-width: 1140px;
   padding: 0em 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+#main-nav .navbar-nav {
+  padding-top: .3rem;
+}
+
+#main-nav .nav-link {
+  color: #4a4a4a;
+  text-transform: lowercase;
+}
+
+#menuButton {
+  font-weight: bold;
+  border-radius: 500px;
+  background-color: #df2d16;
+  border-color: #df2d16;
+  padding: .2rem .2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }

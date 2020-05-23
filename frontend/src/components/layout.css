@@ -7,6 +7,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
 }
 article,
 aside,
@@ -619,4 +620,22 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+#main-nav {
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+#main-footer {
+  margin: auto;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #595959;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0em 1rem;
 }

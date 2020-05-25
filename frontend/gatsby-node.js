@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allStrapiRecipe.edges.forEach(({ node }) => {
+result.data.allStrapiRecipe.edges.forEach(({ node }) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/recipe-page.js`),

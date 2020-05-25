@@ -10,6 +10,10 @@ module.exports = {
     description: `This cookbook contains my recipes and generates an automatic list of meals with a grocery list`,
     author: `@gatsbyjs`,
   },
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:5000",
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

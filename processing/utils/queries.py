@@ -1,16 +1,13 @@
-import sqlite3
+import requests
+import json
 
 
-def read_ingredients(db):
-    c = db.cursor()
-    c.execute("SELECT * FROM ingredients")
-    resultat  = c.fetchall()
-    c.close()
-    return(resultat)
+def read_recipes(API_URL):
+    r = requests.get(API_URL+'/recipes')
+    json_data = json.loads(r.text)
+    return(json_data)
 
-def read_recipes(db):
-    c = db.cursor()
-    c.execute("SELECT * FROM recipes")
-    resultat  = c.fetchall()
-    c.close()
-    return(resultat)
+def read_ingredients(API_URL):
+    r = requests.get(API_URL+'/ingredients')
+    json_data = json.loads(r.text)
+    return(json_data)

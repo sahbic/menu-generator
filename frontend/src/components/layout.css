@@ -666,5 +666,20 @@ pre tt:after {
 }
 
 .recipe-item {
+  margin: 0 .7% 20px;
+}
+
+.module-text {
+  text-align: center;
+  min-height: 120px;
+  margin-top: 10px;
   padding-bottom: 30px;
+}
+
+.recipeimage {
+  border-radius: 20px;
+}
+
+.rectangle {
+  background: black;
 }

@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
         </Col>
         <Col md={12} lg={9}>
           <Container>
-            <Row className="text-center">
+            <Row>
               {data.allStrapiRecipe.edges.map(({ node }) => (
                 <Col sm={6} xl={4} key={node.slug}>
                   <Recipe recipe={node}/>

@@ -8,8 +8,12 @@ const Recipe = ({ recipe }) => {
         <>
             <div  className="recipe-item">
                 <Link to={recipe.slug}>
-                    {recipe.picture && <Img fluid={recipe.picture.childImageSharp.fluid} /> }
-                    <h4>{recipe.recipename}</h4>
+                    <div className="module-image">
+                        {recipe.picture ? <Img className="recipeimage" fluid={recipe.picture.childImageSharp.fluid} /> :  <div className="rectangle" /> }
+                    </div>
+                    <div className="module-text">
+                        <h4>{recipe.recipename}</h4>
+                    </div>
                 </Link>
             </div>
         </>

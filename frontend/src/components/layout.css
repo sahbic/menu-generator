@@ -664,3 +664,7 @@ pre tt:after {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.recipe-item {
+  padding-bottom: 30px;
+}

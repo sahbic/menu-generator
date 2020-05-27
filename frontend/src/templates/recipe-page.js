@@ -10,11 +10,11 @@ export default function RecipePage({ data }) {
       <SEO title={post.recipename} />
       <div>
         <h1>{post.recipename}</h1>
-        {data.strapiRecipe.ingredients.map(({ ingredient }) => (
-            <ul>
-                <li key={ingredient.id}>{ingredient.ingredientname}</li>
-            </ul>
-        ))}
+        <ul>
+          {data.strapiRecipe.ingredients.map(({ ingredient }) => (
+                  <li key={ingredient.id}>{ingredient.ingredientname}</li>
+          ))}
+        </ul>
       </div>
     </Layout>
   )

@@ -1,5 +1,8 @@
 import React from "react"
 
+import { Checkbox, FormGroup, FormControlLabel } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
+
 function getCourses(menuitems) {
 
     var items = {}
@@ -39,15 +42,28 @@ function getCourses(menuitems) {
     return(items)
 }
 
+const StyledFormControlLabel = withStyles({
+    root: {
+        margin: '0 0% 0px',
+    },
+    label: {
+      fontSize: '1rem',
+      fontFamily: 'serif',
+    },
+  })(FormControlLabel);
+
 const CategoryList = ({category, list}) => {
     return(
         <>
             <h4>{category}</h4>
-            <ul>
+            {/* <ul> */}
+            <FormGroup column>
             {Object.values(list[category]).map((item) => (
-                <li key={item.id}>{item.amount} {item.ingredientname}</li>
+                // <li key={item.id}>{item.amount} {item.ingredientname}</li>
+                <StyledFormControlLabel className="list-ingredient-group" control={<Checkbox color="primary"/>} label={item.amount + ' ' + item.ingredientname} />
             ))}
-            </ul>
+            </FormGroup>
+            {/* </ul> */}
         </>
     )
 }

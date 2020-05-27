@@ -11,10 +11,14 @@ const Recipe = ({ recipe }) => {
                     <div className="module-image">
                         {recipe.picture ? <Img className="recipeimage" fluid={recipe.picture.childImageSharp.fluid} /> :  <div className="rectangle" /> }
                     </div>
-                    <div className="module-text">
-                        <h4>{recipe.recipename}</h4>
-                    </div>
                 </Link>
+                    <div className="module-text">
+                        <Link to={recipe.slug} style={{ textDecoration: 'none' }}>
+                            <p className="module-recipe-title">{recipe.recipename}</p>
+                        </Link>
+                        <p className="module-add-menu">Menu</p>
+                    </div>
+                
             </div>
         </>
     )

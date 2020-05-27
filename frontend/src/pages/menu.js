@@ -4,7 +4,10 @@ import { Button } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import MenuCard from "../components/menucard"
 import Courses from "../components/courses"
+
+import { Container, Row, Col } from "react-bootstrap"
 
 function MenuPage ({ data }) {
 
@@ -21,16 +24,27 @@ function MenuPage ({ data }) {
   };
 
   return(
-  <Layout>
+    <Layout>
     <SEO title="Menu" />
-    <Button variant="outline-primary" onClick={getRandomMenu}>Generez un Menu</Button>
-    <h3>Menu</h3>
-    <ul>
-      {menuitems && menuitems.map((item) => (
-        <li key={item.id}>{item.recipename}</li>
-      ))}
-    </ul>
-    <Courses menuitems={menuitems}/>
+    <Container>
+      <Row>
+        <Col>
+          <div className="generate-menu-button">
+            <Button variant="outline-primary" onClick={getRandomMenu}>Generez un Menu</Button>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <MenuCard menuitems = {menuitems}/>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Courses menuitems={menuitems}/>
+        </Col>
+      </Row>
+    </Container>
   </Layout>
   )
 

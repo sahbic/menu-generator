@@ -12,11 +12,11 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <Container>
       <Row>
-        <Col lg={2}>
+        <Col lg={3}>
           <p>qqchose</p>
         </Col>
         <Col md={12} lg={9}>
-          <Container>
+          <Container className="container-recipes">
             <Row>
               {data.allStrapiRecipe.edges.map(({ node }) => (
                 <Col sm={6} xl={4} key={node.slug}>

@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -658,11 +658,15 @@ pre tt:after {
 #menuButton {
   font-weight: bold;
   border-radius: 500px;
-  background-color: #df2d16;
-  border-color: #df2d16;
+  background-color: #185d8c;
+  border-color: #185d8c;
   padding: .2rem .2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.container-recipes {
+  padding: 0rem .2rem;
 }
 
 .recipe-item {
@@ -670,16 +674,59 @@ pre tt:after {
 }
 
 .module-text {
-  text-align: center;
   min-height: 120px;
-  margin-top: 10px;
   padding-bottom: 30px;
+  padding-top: 10px;
+  background: #ffffff;
+}
+
+.module-recipe-title {
+  text-align: center;
+  color: #185d8c;
+  font-weight: normal;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 0.97rem;
+}
+
+.module-add-menu {
+  text-align: right;
+  position: absolute;
+  bottom:0;
+  right: 0;
+  color: #185d8c;
+  padding-right: 30px;
+  font-size: 0.8rem;
 }
 
 .recipeimage {
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .rectangle {
+  height: 100%;
   background: black;
+  display: flex;
+  flex-direction: row;
 }
+
+.generate-menu-button {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-recipe-container {
+    margin-bottom: 40px;
+}
+
+.menu-recipe-card {
+  height: 60px;
+  text-align: center;
+  color: #185d8c;
+  background: #ffffff;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-radius: 10px;
+  margin: 0 5% 10px;
+}
+

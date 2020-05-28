@@ -3,6 +3,8 @@ import React from "react"
 import { Checkbox, FormGroup, FormControlLabel } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
 
+import { CardColumns, Card} from "react-bootstrap"
+
 function getCourses(menuitems) {
 
     var items = {}
@@ -55,15 +57,14 @@ const StyledFormControlLabel = withStyles({
 const CategoryList = ({category, list}) => {
     return(
         <>
-            <h4>{category}</h4>
-            {/* <ul> */}
-            <FormGroup column>
-            {Object.values(list[category]).map((item) => (
-                // <li key={item.id}>{item.amount} {item.ingredientname}</li>
-                <StyledFormControlLabel className="list-ingredient-group" control={<Checkbox color="primary"/>} label={item.amount + ' ' + item.ingredientname} />
-            ))}
-            </FormGroup>
-            {/* </ul> */}
+            <div className="type-card">
+                <h4 className="ingredient-type-title">{category.replace(/_/g," ")}</h4>
+                <FormGroup column>
+                    {Object.values(list[category]).map((item) => (
+                        <StyledFormControlLabel className="list-ingredient-group" control={<Checkbox color="primary"/>} label={item.amount + ' ' + item.ingredientname} />
+                    ))}
+                </FormGroup>
+            </div>
         </>
     )
 }
@@ -73,9 +74,13 @@ const Courses = ({menuitems}) => {
     return(
         <>
         <h3>Liste de Courses</h3>
-            {courses && Object.keys(courses).map((item,i) => (
-                <CategoryList key={item} category={item} list={courses}/>
-            ))}
+                <CardColumns>
+                    {courses && Object.keys(courses).map((item,i) => (
+                        <Card style={{ border: 'none' }}>
+                            <CategoryList category={item} list={courses}/>
+                        </Card>  
+                    ))}
+                </CardColumns>
       </>
     )
 }

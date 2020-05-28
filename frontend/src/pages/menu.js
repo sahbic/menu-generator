@@ -36,12 +36,12 @@ function MenuPage ({ data }) {
       </Row>
       <Row>
         <Col>
-          <MenuCard menuitems = {menuitems}/>
+          {menuitems && <MenuCard menuitems = {menuitems}/>}
         </Col>
       </Row>
       <Row>
         <Col>
-          <Courses menuitems={menuitems}/>
+          {menuitems && <Courses menuitems={menuitems}/>}
         </Col>
       </Row>
     </Container>

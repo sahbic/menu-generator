@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
             <Row>
               {data.allStrapiRecipe.edges.map(({ node }) => (
                 <Col sm={6} xl={4} key={node.slug}>
-                  <Recipe recipe={node}/>
+                  <Recipe recipe={node} file={data.file}/>
                 </Col>
               ))}
             </Row>
@@ -47,6 +47,13 @@ query MyQuery {
             }
           }
         }
+      }
+    }
+  }
+  file(relativePath: { eq: "food.jpeg" }) {
+    childImageSharp {
+      fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
       }
     }
   }

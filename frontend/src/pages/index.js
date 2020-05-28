@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => (
     <Container>
       <Row>
         <Col lg={3}>
-          <p>qqchose</p>
+          <p>recipes</p>
         </Col>
         <Col md={12} lg={9}>
           <Container className="container-recipes">

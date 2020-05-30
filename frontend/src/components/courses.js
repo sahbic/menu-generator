@@ -73,7 +73,7 @@ const Courses = ({menuitems}) => {
     const courses = menuitems ? getCourses(menuitems) : null
     return(
         <>
-        <h3>Liste de Courses</h3>
+        <h3 style={{ fontFamily: 'serif' }}>Liste de Courses</h3>
                 <CardColumns>
                     {courses && Object.keys(courses).map((item,i) => (
                         <Card style={{ border: 'none' }}>
